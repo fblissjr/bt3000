@@ -62,7 +62,7 @@ st.write(f"Current scenario: {scenario_objects[st.session_state.scenario_index].
 st.write(f"Current scenario: {scenario_objects[st.session_state.scenario_index].name}")
 
 # Buttons to like, pass, or skip the current scenario
-like_button, pass_button, prev_button, next_button = st.beta_columns(4)
+like_button, pass_button, prev_button, next_button = st.columns(4)
 if like_button.button("Like"):
     # Add the current scenario to the selected scenarios
     st.session_state.selected_scenarios.append(scenario_objects[st.session_state.scenario_index].name)
