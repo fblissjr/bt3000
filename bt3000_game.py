@@ -64,7 +64,7 @@ Now, you'll choose the scenarios you want to simulate. Swipe right if you want t
 )
 # Use session state to remember the current scenario and the user's selections
 if "scenario_index" not in st.session_state:
-    st.session_state.scenario_index = 0
+    st.session_state["scenario_index"] = 0
 if "selected_scenarios" not in st.session_state:
     st.session_state.selected_scenarios = []
 
