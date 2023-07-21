@@ -1,7 +1,27 @@
 import streamlit as st
 import yaml
-from backtester import Backtester
-from scenario import Scenario
+
+class Backtester:
+    def __init__(self, portfolio):
+        self.portfolio = portfolio
+        self.scenarios = []
+
+    def add_scenario(self, scenario):
+        self.scenarios.append(scenario)
+
+    def run(self):
+        for scenario in self.scenarios:
+            scenario.apply(self.portfolio)
+
+    def get_results(self):
+        return self.portfolio
+
+class Scenario:
+    def __init__(self, name, description, effect, parameters):
+        self.name = name
+        self.description = description
+        self.effect = effect
+        self.parameters = parameters
 
 # Load scenarios from YAML config files
 with open('scenarios.yaml', 'r') as file:
