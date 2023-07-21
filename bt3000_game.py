@@ -107,4 +107,4 @@ if st.button("Start Game"):
     # Display the results
     st.subheader("Results")
     st.line_chart(results)
-    st.write(f"You ended up with ${sum(results.values())}!")
+    st.write(results)
