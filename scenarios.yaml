@@ -1,0 +1,63 @@
+- name: Godzilla Attack
+  description: This represents a sudden, unexpected event that leads to massive destruction.
+  effect: reduce_prices
+  parameters:
+    reduction_factor: -0.7
+
+- name: Alien Invasion
+  description: This represents a foreign entity causing disruption.
+  effect: change_ownership
+  parameters:
+    companies: ['SNOW', 'CRM', 'MSFT']
+
+- name: Zombie Apocalypse
+  description: This represents a long-term, ongoing crisis that slowly gets worse over time.
+  effect: reduce_prices_gradually
+  parameters:
+    reduction_factor: -0.02
+
+- name: Superhero Rescue
+  description: This represents a sudden positive event that saves the day.
+  effect: increase_prices
+  parameters:
+    increase_factor: 0.7
+
+- name: Time Travel
+  description: This represents the ability to go back in time and change your investment decisions.
+  effect: rewind_backtest
+  parameters:
+    days: 30
+
+- name: Mystery Box
+  description: This represents an unknown event that could either be positive or negative.
+  effect: random_price_change
+  parameters:
+    companies: ['SNOW', 'CRM', 'MSFT']
+    change_factor_range: [-0.5, 0.5]
+
+- name: Weather Change
+  description: This represents changing market conditions.
+  effect: sector_price_change
+  parameters:
+    sectors: ['Tech', 'Healthcare', 'Energy']
+    change_factor_range: [-0.2, 0.2]
+
+- name: Gold Rush
+  description: This represents the discovery of a new valuable resource, leading to a boom in a specific sector.
+  effect: sector_price_increase
+  parameters:
+    sector: 'Tech'
+    increase_factor: 0.7
+
+- name: Magic Spell
+  description: This represents a global event that affects all assets in a mystical way.
+  effect: complex_price_change
+  parameters:
+    function: 'np.cos'
+
+- name: Game of Thrones
+  description: This represents political intrigue and changes in leadership.
+  effect: political_price_change
+  parameters:
+    companies: ['SNOW', 'CRM', 'MSFT']
+    change_factor_range: [-0.3, 0.3]
