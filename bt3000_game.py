@@ -58,6 +58,9 @@ if 'selected_scenarios' not in st.session_state:
 # Display the current scenario
 st.write(f"Current scenario: {scenario_objects[st.session_state.scenario_index].name}")
 
+# Display the current scenario
+st.write(f"Current scenario: {scenario_objects[st.session_state.scenario_index].name}")
+
 # Buttons to like, pass, or skip the current scenario
 like_button, pass_button, prev_button, next_button = st.beta_columns(4)
 if like_button.button("Like"):
